@@ -1,0 +1,1344 @@
+/*
+Theme Name: nathalie-mota
+Theme URI: https://projet11
+Author: Stéphane Mouron
+Author URI: https://projet11
+Description: Thème pour le site de partage de séries de photos de Nathalie Mota, avec ses clients
+Requires at least: WordPress 5.0
+Version: 1.0.0
+Text Domain: nathaliemota
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*/
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("../assets/fonts/poppins-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/poppins-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsItalic";
+  src: url("../assets/fonts/poppins-italic-webfont.woff2") format("woff2"),
+    url("../assets/fonts/poppins-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url("../assets/fonts/poppins-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts/poppins-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("../assets/fonts/poppins-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/poppins-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "space_monobold";
+  src: url("../assets/fonts/spacemono-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/spacemono-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "space_monobold_italic";
+  src: url("../assets/fonts/spacemono-bolditalic-webfont.woff2") format("woff2"),
+    url("../assets/fonts/spacemono-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "space_monoitalic";
+  src: url("../assets/fonts/spacemono-italic-webfont.woff2") format("woff2"),
+    url("../assets/fonts/spacemono-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "space_monoregular";
+  src: url("../assets/fonts/spacemono-regular-webfont.woff2") format("woff2"),
+    url("../assets/fonts/spacemono-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFFFFF; 
+    color: #23282d; 
+    font-family: 'Space Mono', monospace;     
+    margin: auto; 
+}
+
+  
+.container {
+    width: 85%;
+    max-width: 1440px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
+  /* navbar regular css start */
+  .navbar-area {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    box-shadow: 0px 4px 14px 10px #00000008;
+
+  
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      li a {
+        color: #000000;
+        padding: 30px;
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          background: rgba(255,255,255,.1);
+        }
+      }
+    }
+  }
+  .site-logo img {
+    width: 216px;
+    height: 14px;
+    
+  }
+
+  
+  
+  /* nav-toggler css */
+  .nav-toggler {
+    padding: 5px;
+    background-color: transparent;
+    border: none !important;
+    cursor: pointer;
+    height: 39px;
+    display: none;
+  }
+  .nav-toggler span, 
+  .nav-toggler span:before, 
+  .nav-toggler span:after {
+    width: 28px;
+    height: 2px;
+    background-color: #000000;
+    display: block;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+  .nav-toggler span:before {
+    content: '';
+    transform: translateY(-9px);
+  }
+  .nav-toggler span:after {
+    content: '';
+    transform: translateY(6px);
+  }
+  .nav-toggler.toggler-open span {
+    background-color: transparent;
+  }
+  .nav-toggler.toggler-open span:before {
+    transform: translateY(0px) rotate(45deg);
+  }
+  .nav-toggler.toggler-open span:after {
+    transform: translateY(-3px) rotate(-45deg);
+  }
+  .intro-area {
+    height: calc(100vh - 61px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+ 
+  /* fin nav */
+  
+/* Styles for the banner section */
+.banner {
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 770px) {
+    height: 250px;
+  }
+
+  /* Styles for the background image within the banner */
+  & img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    // Assuming `keyFrames` is a mixin or function for defining animations
+  }
+}
+
+/* Styles for the heading element */
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 85%;
+  height: 10%;
+  font-family: "space_monobold_italic", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 6vw;
+  line-height: 10vh;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 3px #ffffff;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+  // Assuming `keyFrames` is a mixin or function for defining animations
+
+  @media screen and (max-width: 770px) {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+}
+
+
+
+
+
+
+  /* mobile @media */
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 100%;
+    }
+    .titre_header img{
+      margin-top: 6rem;
+      width:  90%;
+    }
+    .bgr_header{
+      width:  100%;
+      height: 900px;
+  
+    }
+    .site-logo img {
+      margin-top: 30px; 
+    }
+    .nav-toggler{
+      display: block;
+      margin-top: 16px;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top:80px;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+      background-color: rgb(255, 0, 0);
+      max-height: 0;
+      overflow: hidden;
+      transition: .4s;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -ms-transition: .4s;
+      -o-transition: .4s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+        color: #FFF;
+        text-align: center;
+        font-family: "Space Mono";
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+
+     
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(255,255,255,.1);
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+     
+  }
+  @media screen and (max-width: 375px){
+    .site-logo img {
+      width: 138px;
+      height: 9px;
+      top: 32px;
+      left: 40px;
+      margin-top: 30px;
+      
+    }
+    .nav-toggler {
+      margin-top: 18px;
+    }
+  }
+
+/* navbar css @media */
+
+
+
+.filtre {
+  max-width: 1140px;
+  margin: 0 auto 40px;
+  @media screen and (max-width: 1140px) {
+    margin: 0 100px 40px;
+  }
+
+}
+
+.custom-select {
+  width: 100%;
+  height: 43px;
+  border: 1.3px solid #b8bbc2 !important;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+/* Style pour le conteneur de chaque paire label/select */
+.taxonomy-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  @media screen and (max-width: 770px) {
+    width: 100%;
+  }
+}
+
+/* Styles pour le conteneur #filtrePhoto */
+#filtrePhoto {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 340px) {
+    margin-bottom: 50px;
+  }
+}
+
+/* Styles pour la section gauche contenant 'Catégorie' et 'Format' */
+.left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+  }
+}
+
+/* Styles pour la section droite contenant 'Trier par' */
+.right-section {
+  align-items: flex-end;
+}
+
+/* Styles spécifiques pour le sélecteur 'Trier par' */
+#annees {
+  margin-left: auto;
+}
+
+
+/* Styles du bloc de catalogue */
+.blocCatalogue {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  gap: 50px 10px;
+  max-width: 1140px;
+  @media screen and (max-width: 1140px) {
+    margin: 0 100px;
+  }
+}
+
+/* Styles de l'image principale dans le bloc */
+#load-moreContainer {
+  width: 100%;
+}
+
+/* Styles du bouton "Plus d'image" */
+#btnLoad-more {
+  display: block;
+  position: relative;
+  width: 270px;
+  height: 50px;
+  line-height: 100%;
+  background-color: #d8d8d8;
+  font-family: space_monoregular;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 2px;
+  border: none;
+  margin: 0 auto;
+  margin-bottom: 5%;
+
+  /* Styles au survol du bouton */
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+
+
+/* Styles pour la section des photos similaires */
+.PhotoSimilaire {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Styles pour chaque bloc de photo relative */
+.blockPhotoRelative {
+  position: relative;
+  flex: 1 1 40%;
+  aspect-ratio: 1/1;
+  line-height: normal;
+
+  @media screen and (max-width: 765px) {
+    flex-basis: 100%;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Styles pour l'overlay et les icônes au survol */
+  .overlay:hover .eye-icon,
+  .overlay:hover .fullscreen-icon {
+    display: block;
+  }
+}
+
+/* Styles pour l'overlay au survol de l'image */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 0.3s, background-color 0.3s;
+
+  /* Ajustements responsives au survol */
+  &:hover {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Affichage des titres au survol */
+    h2,
+    h3 {
+      display: block;
+    }
+  }
+
+  /* Styles pour les titres dans l'overlay */
+  h2 {
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      font-size: 12px;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: white;
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    display: none;
+
+    /* Ajustements responsives */
+    @media screen and (max-width: 765px) {
+      font-size: 12px;
+    }
+  }
+
+  /* Styles pour l'icône de l'œil au survol */
+  .eye-icon {
+    width: 48px;
+    height: 33.2px;
+    top: calc(50% - 24px);
+    left: calc(50% - 16px);
+    position: absolute;
+    display: none;
+  }
+
+  /* Styles pour l'icône de plein écran au survol */
+  .fullscreen-icon {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    right: 10px;
+    border: 1px;
+    display: none;
+
+  }
+}
+
+/* Styles for the lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+/* Close button styles */
+  .lightboxClose {
+    position: absolute;
+    top: 40px;
+    right: 18%;
+    font-size: 23px;
+    cursor: pointer;
+    color: #fff;
+    @media screen and (max-width: 1140px) {
+      right: -8%;
+    }
+  }
+}
+
+
+/* Navigation button styles */
+.lightbox .lightboxPrevious,
+.lightbox .lightboxNext {
+  font-family: space_monoregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+  color: #fff;
+
+  @media screen and (max-width: 765px) {
+    top: 89%;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 300px) {
+    right: 0%;
+    top: 95%;
+  }
+
+  &:hover {
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+
+/* Styles for the previous navigation button */
+.lightbox .lightboxPrevious {
+  left: 12%;
+
+  @media screen and (min-width: 765px) and (max-width: 1140px) {
+    left: -18%;
+    font-size: 25px;
+    z-index: 1;
+    top: 80%;
+
+    &:hover {
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 765px) {
+    right: 0%;
+    left: 0%;
+    top: 95%;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 400px) {
+    top: 95%;
+    left: -11%;
+  }
+}
+
+/* Styles for the next navigation button */
+.lightbox .lightboxNext {
+  right: 15%;
+
+  @media screen and (min-width: 765px) and (max-width: 1140px) {
+    right: -16%;
+    font-size: 25px;
+    z-index: 1;
+    top: 80%;
+
+    &:hover {
+      font-size: 30px;
+    }
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 765px) {
+    right: 0%;
+    top: 95%;
+  }
+
+  @media screen and (min-width: 200px) and (max-width: 400px) {
+    top: 95%;
+    right: -8%;
+  }
+}
+
+/* Styles for the lightbox image */
+.lightboxImage {
+  width: 564px;
+  height: 495px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  @media screen and (max-width: 1140px) {
+    width: 100%;
+  }
+}
+
+/* Caption styles */
+.lightbox .lightbox-caption {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Reference text styles */
+.lightboxReference {
+  font-family: PoppinsRegular;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  position: absolute;
+  text-transform: uppercase;
+
+  z-index: 1;
+  bottom: 110px;
+  left: 482px;
+  color: #fff;
+
+  width: 170px;
+  height: 21px;
+
+  @media screen and (min-width: 250px) and (max-width: 350px) {
+    bottom: 62px;
+    left: 2px;
+    width: 80px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 350px) and (max-width: 400px) {
+    bottom: 62px;
+    left: 0px;
+    width: 80px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 765px) {
+    bottom: 80px;
+    left: 22px;
+    width: 80px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 765px) and (max-width: 1024px) {
+    bottom: 10px;
+    left: 17px;
+    width: 80px;
+    z-index: 1;
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1140px) {
+    bottom: 15px;
+    width: 80px;
+    font-size: 22px;
+    left: 0px;
+  }
+}
+
+/* Category text styles */
+.lightboxCategorie {
+  font-family: space_monoregular;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: right;
+  position: absolute;
+  text-transform: uppercase;
+  z-index: 1;
+
+  bottom: 110px;
+  right: 482px;
+  color: #fff;
+
+  @media screen and (min-width: 250px) and (max-width: 350px) {
+    bottom: 62px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 350px) and (max-width: 400px) {
+    bottom: 62px;
+    right: 15px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 400px) and (max-width: 765px) {
+    bottom: 80px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 765px) and (max-width: 1024px) {
+    bottom: 10px;
+    right: 15px;
+    z-index: 1;
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1140px) {
+    bottom: 15px;
+    right: 15px;
+    font-size: 22px;
+  }
+}
+
+/* Styles for the lightbox photo */
+.lightboxPhoto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 564px;
+  height: 495px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+
+  @media screen and (max-width: 1140px) {
+    width: 100%;
+  }
+}
+
+/* Styles for the lightbox content */
+.lightbox-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 1140px) {
+    width: 70%;
+  }
+}
+
+
+/* Styles généraux */
+body {
+  font-family: "space_monoregular";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section principale du catalogue de photos */
+.cataloguePhotos {
+  display: flex;
+  flex-direction: column;
+  padding-top: 76px;
+  max-width: 80%;
+  margin: auto;
+  height: calc(100vh - 80px - 32px);
+
+  @media screen and (max-width: 765px) {
+    max-width: 375px;
+  }
+}
+
+/* Section principale pour la galerie de photos */
+.galleryPhotos {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: calc(100% - 118px);
+
+  @media screen and (max-width: 820px) {
+    height: 100%;
+  }
+}
+
+/* Section détaillée de la photo */
+.detailPhoto {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  @media screen and (max-width: 765px) {
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments en colonne */
+
+    .photo-info {
+      width: 100%;
+      text-align: center; /* Centrer le texte */
+      padding-bottom: 20px; /* Ajuster l'espacement bas */
+    }
+
+    .photo-title {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 40px;
+      line-height: 48px;
+
+      @media screen and (max-width: 820px) {
+        font-size: 30px; /* Ajustez la taille de la police pour les écrans plus petits */
+        line-height: 36px; /* Ajustez la hauteur de ligne pour les écrans plus petits */
+      }
+    }
+  }
+
+  .photo-title {
+    width: 50%;
+    margin: 0;
+
+    h2 {
+      font-family: "space_monoregular";
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 66px;
+      line-height: 58px;
+
+      @media screen and (max-width: 820px) {
+        font-size: 40px; /* Ajustez la taille de la police pour les écrans plus petits */
+        line-height: 48px; /* Ajustez la hauteur de ligne pour les écrans plus petits */
+        width: 100%;
+        left: 0;
+        position: relative;
+        text-align: center;
+      }
+    }
+  }
+
+  .photo-info {
+    width: 50%;
+    text-align: left;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 97%;
+      height: 1px;
+      background-color: black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+    }
+
+    padding-bottom: 40px;
+    font-family: "space_monoregular";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+  }
+}
+
+/* Container photo */
+.containerPhoto {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+
+  @media screen and (max-width: 820px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: contain;
+  }
+}
+
+/* Section du formulaire de contact */
+.contenairContact {
+  width: 100%;
+  height: 118px;
+  align-items: center;
+  border-bottom: solid black 1px;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+
+    p {
+      font-family: "PoppinsRegular";
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+      letter-spacing: 0em;
+      width: 263px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* Section du bouton de contact */
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+    @media screen and (max-width: 820px) {
+      flex-direction: column;
+    }
+  }
+}
+
+/* Bouton de contact */
+#boutonContact {
+  width: 272px;
+  height: 50px;
+  line-height: 100%;
+  background-color: #d8d8d8;
+  font-family: "space_monoregular";
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 2px;
+  border: none;
+  margin-right: 20px;
+
+  @media screen and (max-width: 820px) {
+    width: 263px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Section de navigation entre les photos */
+.naviguationPhotos {
+  width: 50%;
+  height: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media screen and (max-width: 820px) {
+    display: none;
+  }
+}
+
+/* Flèches de navigation entre les photos */
+.naviguationArrow {
+  width: 81px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 10px;
+  height: 118px;
+
+  /* Flèches gauche et droite */
+  .arrow {
+    width: 25px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+
+    &:hover + .miniPicture {
+      display: flex !important;
+    }
+
+    .arrow-left {
+      top: 10px;
+      position: relative;
+    }
+    .arrow-right {
+      top: 10px;
+      position: relative;
+    }
+  }
+}
+
+/* Conteneur pour les miniatures au survol des flèches de navigation */
+.miniPicture-content {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Miniatures des photos adjacentes */
+.miniPicture,
+.miniPicture-left,
+.miniPicture-right {
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  height: 71px;
+  width: 81px;
+  top: 8px;
+  transition: visibility 0, 3s, opacity 0.3s linear;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Affichage des miniatures au survol des flèches de navigation */
+.arrow:hover + .miniPicture,
+.arrow:hover + .miniPicture-left,
+.arrow:hover + .miniPicture-right {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Titre pour la section des photos similaires */
+.titleSugest {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+
+  @media screen and (max-width: 1140px) {
+    text-align: center;
+  }
+}
+
+/* Style pour le message "Cette photo vous intéresse ?" */
+.interesser {
+  font-family: "PoppinsRegular";
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Style pour le message "Pas de photo similaire trouvée" */
+.photoNotFound {
+  margin: 0 auto;
+  margin-bottom: 5%;
+  font-family: "PoppinsRegular";
+  font-size: 20px;
+  text-align: center;
+}
+
+.similars {
+  margin: auto;
+  max-width: 80%;
+}
+/* Affichage des photos similaires */
+.similar_photo {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  @media screen and (max-width: 1140px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .similar_photo__container {
+    width: 48%;
+  }
+
+  .similar_photo__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Styles généraux */
+.width-420 {
+  width: 420px;
+
+  @media screen and (max-width: 820px) {
+    width: 100%;
+    left: 10px;
+    position: relative;
+  }
+}
+
+
+/* Styles de l'overlay de la fenêtre modale */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 3, 0.8);
+  display: none; /* Initialement masqué, sera affiché par JavaScript pour afficher la fenêtre modale */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  &.open {
+    display: flex;
+  }
+}
+
+/* Styles de la fenêtre modale elle-même */
+.popup-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 512px;
+  border: 2px solid black;
+  background: white;
+  padding: 8px 40px 40px 40px;
+  height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Media query pour les écrans de petite taille */
+@media screen and (max-width: 465px) {
+  .popup-contact {
+    max-width: 270px;
+    height: auto;
+  }
+}
+
+
+div#wpcf7-f31-o1 {
+  height: 83%;
+}
+
+/* Styles pour le formulaire de contact */
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+/* Styles pour les champs de saisie personnalisés */
+.custom-input-class,
+.custom-textarea-class {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #b8bbc2;
+  resize: none;
+}
+
+/* Styles spécifiques pour le champ de saisie */
+.custom-input-class {
+  height: 37px;
+}
+
+/* Styles spécifiques pour la zone de texte */
+.custom-textarea-class {
+  height: 180px;
+}
+
+/* Styles pour l'étiquette personnalisée */
+.custom-label {
+  font-size: 12px;
+  font-family: "PoppinsMedium";
+  font-weight: bolder;
+  line-height: 18px;
+}
+
+/* Styles pour le bouton de soumission personnalisé */
+.customsubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d8d8d8;
+  height: 50px;
+  width: 275px;
+  border: 1px solid #b8bbc2;
+}
+
+
+/* Styles pour le footer */
+footer {
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  font-family: "space_monoregular", monospace;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+/* Styles pour le menu du footer */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles pour la liste du menu du footer */
+.footer-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0 40px;
+    a {
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Styles pour les liens dans les éléments de la liste du menu du footer */
+
+/* Media query pour les écrans avec une largeur maximale de 375px */
+@media screen and (max-width: 375px) {
+\  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+    li {
+      order: 1;
+      margin-top: 30px;
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
