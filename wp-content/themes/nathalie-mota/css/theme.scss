@@ -110,10 +110,9 @@ body {
   
   /* navbar regular css start */
   .navbar-area {
-    background: rgb(255, 255, 255);
+    background: #FFF;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
     width: 100%;
-    box-shadow: 0px 4px 14px 10px #00000008;
-
   
   }
   .site-navbar {
@@ -281,7 +280,8 @@ h1 {
       top:80px;
       flex-direction: column;
       align-items: center;
-      z-index: 1;
+      z-index: 3;
+      margin-top: 3rem;
       background-color: rgb(255, 0, 0);
       max-height: 0;
       overflow: hidden;
@@ -300,6 +300,8 @@ h1 {
         text-align: center;
         font-family: "Space Mono";
         font-size: 44px;
+        padding: 0px;
+        padding-top: 2rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -328,6 +330,7 @@ h1 {
     .nav-toggler {
       margin-top: 18px;
     }
+  
   }
 
 /* navbar css @media */
@@ -338,7 +341,7 @@ h1 {
   max-width: 1140px;
   margin: 0 auto 40px;
   @media screen and (max-width: 1140px) {
-    margin: 0 100px 40px;
+    margin: 0 50px 40px;
   }
 
 }
@@ -351,6 +354,10 @@ h1 {
   padding: 10px 20px;
   font-size: 16px;
   background-color: transparent;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 /* Style pour le conteneur de chaque paire label/select */
@@ -372,6 +379,7 @@ h1 {
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    gap: 5px;
   }
 
   @media screen and (max-width: 340px) {
@@ -390,7 +398,7 @@ h1 {
   @media screen and (max-width: 770px) {
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 5px;
     width: 100%;
   }
 }
@@ -412,12 +420,18 @@ h1 {
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
-  gap: 50px 10px;
+  gap: 20px 20px;
   max-width: 1140px;
   @media screen and (max-width: 1140px) {
-    margin: 0 100px;
+    margin: 0 50px;
   }
 }
+/*hover de element catalogue*/
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #E00000;
+  color: white;
+}
+
 
 /* Styles de l'image principale dans le bloc */
 #load-moreContainer {
@@ -533,6 +547,7 @@ h1 {
     position: absolute;
     right: 10px;
     bottom: 10px;
+
     color: white;
     font-family: PoppinsRegular;
     font-size: 14px;
@@ -1130,8 +1145,14 @@ body {
 /* Titre pour la section des photos similaires */
 .titleSugest {
   width: 80%;
+  padding: 3rem;
   margin: 0 auto;
+  
   font-size: 18px;
+  font-weight: 400;
+  line-height: 26.66px;
+
+
 
   @media screen and (max-width: 1140px) {
     text-align: center;
@@ -1157,6 +1178,7 @@ body {
 .similars {
   margin: auto;
   max-width: 80%;
+  margin-bottom: 4rem;
 }
 /* Affichage des photos similaires */
 .similar_photo {
@@ -1283,7 +1305,7 @@ div#wpcf7-f31-o1 {
   align-items: center;
   background: #d8d8d8;
   height: 50px;
-  width: 275px;
+  width: 100%;
   border: 1px solid #b8bbc2;
 }
 
@@ -1330,7 +1352,7 @@ footer {
 
 /* Media query pour les écrans avec une largeur maximale de 375px */
 @media screen and (max-width: 375px) {
-\  .footer-menu {
+  .footer-menu {
     flex-direction: column;
     align-items: center;
     li {

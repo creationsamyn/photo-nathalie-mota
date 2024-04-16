@@ -9,5 +9,5 @@
 
   get_header();
 ?>
-
+ <?php echo" <h1>hola</h1>" ?>
 <?php get_footer(); ?>

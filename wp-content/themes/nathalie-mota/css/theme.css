@@ -19,7 +19,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "PoppinsItalic";
   src: url("../assets/fonts/poppins-italic-webfont.woff2") format("woff2"), url("../assets/fonts/poppins-italic-webfont.woff") format("woff");
@@ -27,7 +26,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "PoppinsMedium";
   src: url("../assets/fonts/poppins-medium-webfont.woff2") format("woff2"), url("../assets/fonts/poppins-medium-webfont.woff") format("woff");
@@ -35,7 +33,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "PoppinsRegular";
   src: url("../assets/fonts/poppins-regular-webfont.woff2") format("woff2"), url("../assets/fonts/poppins-regular-webfont.woff") format("woff");
@@ -43,7 +40,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "space_monobold";
   src: url("../assets/fonts/spacemono-bold-webfont.woff2") format("woff2"), url("../assets/fonts/spacemono-bold-webfont.woff") format("woff");
@@ -51,7 +47,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "space_monobold_italic";
   src: url("../assets/fonts/spacemono-bolditalic-webfont.woff2") format("woff2"), url("../assets/fonts/spacemono-bolditalic-webfont.woff") format("woff");
@@ -59,7 +54,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "space_monoitalic";
   src: url("../assets/fonts/spacemono-italic-webfont.woff2") format("woff2"), url("../assets/fonts/spacemono-italic-webfont.woff") format("woff");
@@ -67,7 +61,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "space_monoregular";
   src: url("../assets/fonts/spacemono-regular-webfont.woff2") format("woff2"), url("../assets/fonts/spacemono-regular-webfont.woff") format("woff");
@@ -75,7 +68,6 @@ Text Domain: nathaliemota
   font-style: normal;
   font-display: swap;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -85,7 +77,7 @@ Text Domain: nathaliemota
 body {
   background: #FFFFFF;
   color: #23282d;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   margin: auto;
 }
 
@@ -98,9 +90,9 @@ body {
 
 /* navbar regular css start */
 .navbar-area {
-  background: white;
+  background: #FFF;
+  box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
   width: 100%;
-  box-shadow: 0px 4px 14px 10px #000000;
 }
 
 .site-navbar {
@@ -108,14 +100,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .site-navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
-
 .site-navbar ul li a {
   color: #000000;
   padding: 30px;
@@ -123,7 +113,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .site-navbar ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
@@ -150,20 +139,20 @@ body {
   height: 2px;
   background-color: #000000;
   display: block;
-  transition: .5s;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  -ms-transition: .5s;
-  -o-transition: .5s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .nav-toggler span:before {
-  content: '';
+  content: "";
   transform: translateY(-9px);
 }
 
 .nav-toggler span:after {
-  content: '';
+  content: "";
   transform: translateY(6px);
 }
 
@@ -197,19 +186,18 @@ body {
   position: relative;
   /* Styles for the background image within the banner */
 }
-
 @media screen and (max-width: 770px) {
   .banner {
     height: 250px;
   }
 }
-
 .banner img {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 3px;
 }
@@ -233,7 +221,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   z-index: 1;
 }
-
 @media screen and (max-width: 770px) {
   h1 {
     -webkit-text-stroke: 1px #ffffff;
@@ -271,15 +258,16 @@ h1 {
     top: 80px;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
-    background-color: red;
+    z-index: 3;
+    margin-top: 3rem;
+    background-color: rgb(255, 0, 0);
     max-height: 0;
     overflow: hidden;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
   }
   .site-navbar ul li {
     width: 100%;
@@ -290,6 +278,8 @@ h1 {
     text-align: center;
     font-family: "Space Mono";
     font-size: 44px;
+    padding: 0px;
+    padding-top: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -303,7 +293,6 @@ h1 {
     overflow: visible;
   }
 }
-
 @media screen and (max-width: 375px) {
   .site-logo img {
     width: 138px;
@@ -316,28 +305,37 @@ h1 {
     margin-top: 18px;
   }
 }
-
 /* navbar css @media */
 .filtre {
-  margin-bottom: 40px;
+  max-width: 1140px;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 1140px) {
+  .filtre {
+    margin: 0 50px 40px;
+  }
 }
 
 .custom-select {
-  width: 260px;
+  width: 100%;
   height: 43px;
   border: 1.3px solid #b8bbc2 !important;
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: transparent;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 /* Style pour le conteneur de chaque paire label/select */
 .taxonomy-container {
   display: flex;
   align-items: center;
+  flex: 1;
 }
-
 @media screen and (max-width: 770px) {
   .taxonomy-container {
     width: 100%;
@@ -347,24 +345,16 @@ h1 {
 /* Styles pour le conteneur #filtrePhoto */
 #filtrePhoto {
   padding-top: 50px;
-  max-width: 1148px;
   display: flex;
   justify-content: space-between;
   margin: auto;
 }
-
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 768px) {
   #filtrePhoto {
     flex-direction: column;
+    gap: 5px;
   }
 }
-
-@media screen and (min-width: 770px) and (max-width: 1140px) {
-  #filtrePhoto {
-    padding: 50px 100px 0;
-  }
-}
-
 @media screen and (max-width: 340px) {
   #filtrePhoto {
     margin-bottom: 50px;
@@ -377,13 +367,13 @@ h1 {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+  width: 50%;
 }
-
 @media screen and (max-width: 770px) {
   .left-section {
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 5px;
     width: 100%;
   }
 }
@@ -404,9 +394,19 @@ h1 {
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
-  gap: 50px 10px;
-  max-width: 1148px;
-  padding: 0 100px;
+  gap: 20px 20px;
+  max-width: 1140px;
+}
+@media screen and (max-width: 1140px) {
+  .blocCatalogue {
+    margin: 0 50px;
+  }
+}
+
+/*hover de element catalogue*/
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #E00000;
+  color: white;
 }
 
 /* Styles de l'image principale dans le bloc */
@@ -431,7 +431,6 @@ h1 {
   margin-bottom: 5%;
   /* Styles au survol du bouton */
 }
-
 #btnLoad-more:hover {
   cursor: pointer;
   background-color: black;
@@ -446,7 +445,6 @@ h1 {
   justify-content: center;
   gap: 10px;
 }
-
 @media screen and (max-width: 765px) {
   .PhotoSimilaire {
     flex-direction: column;
@@ -459,29 +457,20 @@ h1 {
   position: relative;
   flex: 1 1 40%;
   aspect-ratio: 1/1;
-  /* Ajustements responsives */
+  line-height: normal;
   /* Styles pour l'overlay et les icônes au survol */
 }
-
-@media screen and (min-width: 765px) and (max-width: 1140px) {
-  .blockPhotoRelative {
-    width: 370px;
-  }
-}
-
 @media screen and (max-width: 765px) {
   .blockPhotoRelative {
-    flex: 1 1 100%;
-    margin: 0 50px;
+    flex-basis: 100%;
   }
 }
-
 .blockPhotoRelative img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 .blockPhotoRelative .overlay:hover .eye-icon,
 .blockPhotoRelative .overlay:hover .fullscreen-icon {
   display: block;
@@ -496,69 +485,54 @@ h1 {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   transition: opacity 0.3s, background-color 0.3s;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -webkit-transition: opacity 0.3s, background-color 0.3s;
-  -moz-transition: opacity 0.3s, background-color 0.3s;
-  -ms-transition: opacity 0.3s, background-color 0.3s;
-  -o-transition: opacity 0.3s, background-color 0.3s;
-  /*Ajustementsresponsivesausurvol*/
+  /* Ajustements responsives au survol */
   /* Styles pour les titres dans l'overlay */
   /* Styles pour l'icône de l'œil au survol */
   /* Styles pour l'icône de plein écran au survol */
 }
-
 .overlay:hover {
   opacity: 0.8;
   background-color: rgba(0, 0, 0, 0.8);
   /* Affichage des titres au survol */
 }
-
 .overlay:hover h2,
 .overlay:hover h3 {
   display: block;
 }
-
 .overlay h2 {
   text-transform: uppercase;
   position: absolute;
   left: 10px;
-  bottom: 0;
+  bottom: 10px;
   color: white;
   font-family: PoppinsRegular;
   font-size: 14px;
   display: none;
   /* Ajustements responsives */
 }
-
 @media screen and (max-width: 765px) {
   .overlay h2 {
     font-size: 12px;
   }
 }
-
 .overlay h3 {
   text-transform: uppercase;
   position: absolute;
   right: 10px;
-  bottom: 0;
+  bottom: 10px;
   color: white;
   font-family: PoppinsRegular;
   font-size: 14px;
   display: none;
   /* Ajustements responsives */
 }
-
 @media screen and (max-width: 765px) {
   .overlay h3 {
     font-size: 12px;
   }
 }
-
 .overlay .eye-icon {
   width: 48px;
   height: 33.2px;
@@ -567,7 +541,6 @@ h1 {
   position: absolute;
   display: none;
 }
-
 .overlay .fullscreen-icon {
   position: absolute;
   cursor: pointer;
@@ -596,7 +569,6 @@ h1 {
   cursor: pointer;
   /* Close button styles */
 }
-
 .lightbox .lightboxClose {
   position: absolute;
   top: 40px;
@@ -605,7 +577,6 @@ h1 {
   cursor: pointer;
   color: #fff;
 }
-
 @media screen and (max-width: 1140px) {
   .lightbox .lightboxClose {
     right: -8%;
@@ -627,14 +598,12 @@ h1 {
   cursor: pointer;
   color: #fff;
 }
-
 @media screen and (max-width: 765px) {
   .lightbox .lightboxPrevious,
   .lightbox .lightboxNext {
     top: 89%;
   }
 }
-
 @media screen and (min-width: 200px) and (max-width: 300px) {
   .lightbox .lightboxPrevious,
   .lightbox .lightboxNext {
@@ -642,7 +611,6 @@ h1 {
     top: 95%;
   }
 }
-
 .lightbox .lightboxPrevious:hover,
 .lightbox .lightboxNext:hover {
   font-size: 15px;
@@ -654,7 +622,6 @@ h1 {
 .lightbox .lightboxPrevious {
   left: 12%;
 }
-
 @media screen and (min-width: 765px) and (max-width: 1140px) {
   .lightbox .lightboxPrevious {
     left: -18%;
@@ -666,7 +633,6 @@ h1 {
     font-size: 30px;
   }
 }
-
 @media screen and (min-width: 400px) and (max-width: 765px) {
   .lightbox .lightboxPrevious {
     right: 0%;
@@ -674,7 +640,6 @@ h1 {
     top: 95%;
   }
 }
-
 @media screen and (min-width: 200px) and (max-width: 400px) {
   .lightbox .lightboxPrevious {
     top: 95%;
@@ -686,7 +651,6 @@ h1 {
 .lightbox .lightboxNext {
   right: 15%;
 }
-
 @media screen and (min-width: 765px) and (max-width: 1140px) {
   .lightbox .lightboxNext {
     right: -16%;
@@ -698,14 +662,12 @@ h1 {
     font-size: 30px;
   }
 }
-
 @media screen and (min-width: 400px) and (max-width: 765px) {
   .lightbox .lightboxNext {
     right: 0%;
     top: 95%;
   }
 }
-
 @media screen and (min-width: 200px) and (max-width: 400px) {
   .lightbox .lightboxNext {
     top: 95%;
@@ -720,9 +682,9 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 @media screen and (max-width: 1140px) {
   .lightboxImage {
     width: 100%;
@@ -753,7 +715,6 @@ h1 {
   width: 170px;
   height: 21px;
 }
-
 @media screen and (min-width: 250px) and (max-width: 350px) {
   .lightboxReference {
     bottom: 62px;
@@ -762,7 +723,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 350px) and (max-width: 400px) {
   .lightboxReference {
     bottom: 62px;
@@ -771,7 +731,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 400px) and (max-width: 765px) {
   .lightboxReference {
     bottom: 80px;
@@ -780,7 +739,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 765px) and (max-width: 1024px) {
   .lightboxReference {
     bottom: 10px;
@@ -790,7 +748,6 @@ h1 {
     font-size: 25px;
   }
 }
-
 @media screen and (min-width: 1024px) and (max-width: 1140px) {
   .lightboxReference {
     bottom: 15px;
@@ -814,7 +771,6 @@ h1 {
   right: 482px;
   color: #fff;
 }
-
 @media screen and (min-width: 250px) and (max-width: 350px) {
   .lightboxCategorie {
     bottom: 62px;
@@ -822,7 +778,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 350px) and (max-width: 400px) {
   .lightboxCategorie {
     bottom: 62px;
@@ -830,7 +785,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 400px) and (max-width: 765px) {
   .lightboxCategorie {
     bottom: 80px;
@@ -838,7 +792,6 @@ h1 {
     z-index: 1;
   }
 }
-
 @media screen and (min-width: 765px) and (max-width: 1024px) {
   .lightboxCategorie {
     bottom: 10px;
@@ -847,7 +800,6 @@ h1 {
     font-size: 25px;
   }
 }
-
 @media screen and (min-width: 1024px) and (max-width: 1140px) {
   .lightboxCategorie {
     bottom: 15px;
@@ -869,7 +821,6 @@ h1 {
   background-position: center;
   margin: auto;
 }
-
 @media screen and (max-width: 1140px) {
   .lightboxPhoto {
     width: 100%;
@@ -886,7 +837,6 @@ h1 {
   width: 100%;
   height: 100%;
 }
-
 @media screen and (max-width: 1140px) {
   .lightbox-content {
     width: 70%;
@@ -911,9 +861,8 @@ body {
   padding-top: 76px;
   max-width: 80%;
   margin: auto;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 80px - 32px);
 }
-
 @media screen and (max-width: 765px) {
   .cataloguePhotos {
     max-width: 375px;
@@ -925,8 +874,8 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  height: calc(100% - 118px);
 }
-
 @media screen and (max-width: 820px) {
   .galleryPhotos {
     height: 100%;
@@ -940,21 +889,18 @@ body {
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
   position: relative;
 }
-
 @media screen and (max-width: 765px) {
   .detailPhoto {
     flex-direction: column;
-    align-items: center;
-    /* Centrer les éléments en colonne */
+    align-items: center; /* Centrer les éléments en colonne */
   }
   .detailPhoto .photo-info {
     width: 100%;
-    text-align: center;
-    /* Centrer le texte */
-    padding-bottom: 20px;
-    /* Ajuster l'espacement bas */
+    text-align: center; /* Centrer le texte */
+    padding-bottom: 20px; /* Ajuster l'espacement bas */
   }
   .detailPhoto .photo-title {
     width: 100%;
@@ -963,21 +909,16 @@ body {
     line-height: 48px;
   }
 }
-
 @media screen and (max-width: 765px) and (max-width: 820px) {
   .detailPhoto .photo-title {
-    font-size: 30px;
-    /* Ajustez la taille de la police pour les écrans plus petits */
-    line-height: 36px;
-    /* Ajustez la hauteur de ligne pour les écrans plus petits */
+    font-size: 30px; /* Ajustez la taille de la police pour les écrans plus petits */
+    line-height: 36px; /* Ajustez la hauteur de ligne pour les écrans plus petits */
   }
 }
-
 .detailPhoto .photo-title {
   width: 50%;
   margin: 0;
 }
-
 .detailPhoto .photo-title h2 {
   font-family: "space_monoregular";
   text-transform: uppercase;
@@ -986,20 +927,16 @@ body {
   font-size: 66px;
   line-height: 58px;
 }
-
 @media screen and (max-width: 820px) {
   .detailPhoto .photo-title h2 {
-    font-size: 40px;
-    /* Ajustez la taille de la police pour les écrans plus petits */
-    line-height: 48px;
-    /* Ajustez la hauteur de ligne pour les écrans plus petits */
+    font-size: 40px; /* Ajustez la taille de la police pour les écrans plus petits */
+    line-height: 48px; /* Ajustez la hauteur de ligne pour les écrans plus petits */
     width: 100%;
     left: 0;
     position: relative;
     text-align: center;
   }
 }
-
 .detailPhoto .photo-info {
   width: 50%;
   text-align: left;
@@ -1011,7 +948,6 @@ body {
   line-height: 21px;
   letter-spacing: 0.1em;
 }
-
 .detailPhoto .photo-info::before {
   content: "";
   display: block;
@@ -1028,21 +964,21 @@ body {
 .containerPhoto {
   height: 100%;
   width: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 @media screen and (max-width: 820px) {
   .containerPhoto {
     width: 100%;
     height: 100%;
   }
 }
-
 .containerPhoto img {
   width: 100%;
   height: 100%;
   display: flex;
-  object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Section du formulaire de contact */
@@ -1055,7 +991,6 @@ body {
   justify-content: center;
   /* Section du bouton de contact */
 }
-
 @media screen and (max-width: 820px) {
   .contenairContact {
     flex-direction: column;
@@ -1072,14 +1007,12 @@ body {
     justify-content: center;
   }
 }
-
 .contenairContact .contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 50%;
 }
-
 @media screen and (max-width: 820px) {
   .contenairContact .contact {
     flex-direction: column;
@@ -1088,7 +1021,7 @@ body {
 
 /* Bouton de contact */
 #boutonContact {
-  width: 263px;
+  width: 272px;
   height: 50px;
   line-height: 100%;
   background-color: #d8d8d8;
@@ -1099,13 +1032,11 @@ body {
   border: none;
   margin-right: 20px;
 }
-
 @media screen and (max-width: 820px) {
   #boutonContact {
     width: 263px;
   }
 }
-
 #boutonContact:hover {
   cursor: pointer;
   background-color: black;
@@ -1120,7 +1051,6 @@ body {
   flex-direction: column;
   align-items: flex-end;
 }
-
 @media screen and (max-width: 820px) {
   .naviguationPhotos {
     display: none;
@@ -1138,7 +1068,6 @@ body {
   height: 118px;
   /* Flèches gauche et droite */
 }
-
 .naviguationArrow .arrow {
   width: 25px;
   height: auto;
@@ -1146,16 +1075,13 @@ body {
   background-position: center;
   display: inline-block;
 }
-
 .naviguationArrow .arrow:hover + .miniPicture {
   display: flex !important;
 }
-
 .naviguationArrow .arrow .arrow-left {
   top: 10px;
   position: relative;
 }
-
 .naviguationArrow .arrow .arrow-right {
   top: 10px;
   position: relative;
@@ -1180,7 +1106,6 @@ body {
   top: 8px;
   transition: visibility 0, 3s, opacity 0.3s linear;
 }
-
 .miniPicture a,
 .miniPicture-left a,
 .miniPicture-right a {
@@ -1188,13 +1113,13 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .miniPicture a img,
 .miniPicture-left a img,
 .miniPicture-right a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Affichage des miniatures au survol des flèches de navigation */
@@ -1208,10 +1133,12 @@ body {
 /* Titre pour la section des photos similaires */
 .titleSugest {
   width: 80%;
+  padding: 3rem;
   margin: 0 auto;
   font-size: 18px;
+  font-weight: 400;
+  line-height: 26.66px;
 }
-
 @media screen and (max-width: 1140px) {
   .titleSugest {
     text-align: center;
@@ -1237,6 +1164,7 @@ body {
 .similars {
   margin: auto;
   max-width: 80%;
+  margin-bottom: 4rem;
 }
 
 /* Affichage des photos similaires */
@@ -1245,29 +1173,26 @@ body {
   justify-content: center;
   gap: 40px;
 }
-
 @media screen and (max-width: 1140px) {
   .similar_photo {
     flex-direction: column;
     align-items: center;
   }
 }
-
 .similar_photo .similar_photo__container {
   width: 48%;
 }
-
 .similar_photo .similar_photo__img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Styles généraux */
 .width-420 {
   width: 420px;
 }
-
 @media screen and (max-width: 820px) {
   .width-420 {
     width: 100%;
@@ -1284,13 +1209,11 @@ body {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 3, 0.8);
-  display: none;
-  /* Initialement masqué, sera affiché par JavaScript pour afficher la fenêtre modale */
+  display: none; /* Initialement masqué, sera affiché par JavaScript pour afficher la fenêtre modale */
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
-
 .popup-overlay.open {
   display: flex;
 }
@@ -1317,7 +1240,6 @@ body {
     height: auto;
   }
 }
-
 div#wpcf7-f31-o1 {
   height: 83%;
 }
@@ -1328,7 +1250,6 @@ div#wpcf7-f31-o1 {
   flex-direction: column;
   align-items: center;
 }
-
 .form-contact > p {
   margin: 0;
 }
@@ -1367,7 +1288,7 @@ div#wpcf7-f31-o1 {
   align-items: center;
   background: #d8d8d8;
   height: 50px;
-  width: 275px;
+  width: 100%;
   border: 1px solid #b8bbc2;
 }
 
@@ -1400,11 +1321,9 @@ footer {
   margin: 0;
   padding: 0;
 }
-
 .footer-menu li {
   padding: 0 40px;
 }
-
 .footer-menu li a {
   text-decoration: none;
   color: #000;
@@ -1414,15 +1333,15 @@ footer {
 /* Styles pour les liens dans les éléments de la liste du menu du footer */
 /* Media query pour les écrans avec une largeur maximale de 375px */
 @media screen and (max-width: 375px) {
-  \  .footer-menu {
+  .footer-menu {
     flex-direction: column;
     align-items: center;
   }
-  \  .footer-menu li {
+  .footer-menu li {
     order: 1;
     margin-top: 30px;
   }
-  \  .footer-menu li:not(:first-child) {
+  .footer-menu li:not(:first-child) {
     margin-top: 10px;
   }
-}
+}/*# sourceMappingURL=theme.css.map */

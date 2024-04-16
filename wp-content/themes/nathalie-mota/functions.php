@@ -17,6 +17,7 @@ function register_footer_menu() {
 add_action( 'after_setup_theme', 'register_footer_menu' );
 
 
+
 // Ajout des scripts personnalisés
 function enqueue_custom_scripts()
 {
