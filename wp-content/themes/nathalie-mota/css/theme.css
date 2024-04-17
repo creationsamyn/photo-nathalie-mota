@@ -259,7 +259,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     z-index: 3;
-    margin-top: 3rem;
     background-color: rgb(255, 0, 0);
     max-height: 0;
     overflow: hidden;
@@ -291,6 +290,7 @@ h1 {
   .site-navbar ul.open {
     max-height: 100vh;
     overflow: visible;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 375px) {
@@ -866,6 +866,7 @@ body {
 @media screen and (max-width: 765px) {
   .cataloguePhotos {
     max-width: 375px;
+    height: 100%;
   }
 }
 
@@ -969,7 +970,7 @@ body {
 }
 @media screen and (max-width: 820px) {
   .containerPhoto {
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
 }
@@ -1333,6 +1334,32 @@ footer {
 /* Styles pour les liens dans les éléments de la liste du menu du footer */
 /* Media query pour les écrans avec une largeur maximale de 375px */
 @media screen and (max-width: 375px) {
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-menu li {
+    order: 1;
+    margin-top: 30px;
+  }
+  .footer-menu li:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .footer-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-menu li {
+    order: 1;
+    margin-top: 30px;
+  }
+  .footer-menu li:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 430px) {
   .footer-menu {
     flex-direction: column;
     align-items: center;
